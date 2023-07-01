@@ -1,5 +1,13 @@
 import { Fragment } from "react";
 
-export const BookCard = ({bookData}) => {
-    return <div>{bookData.title}</div>;
-    };
+export const BookCard = ({bookData, onBookClick}) => {
+    return (
+    <div
+      onClick={() => {
+        onBookClick(bookData);
+      }}
+    >
+      {bookData.title}
+    </div>
+  );
+};
